@@ -1,3 +1,1 @@
-# Sass boilerplate
-
-Sassを（Webpackで）使うだけのボイラープレートプロジェクト。
+# Rook Code Golf 2023

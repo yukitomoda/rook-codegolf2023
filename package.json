@@ -1,7 +1,7 @@
 {
-  "name": "sass-boilerplate",
+  "name": "rook-codegolf2023",
   "version": "1.0.0",
-  "description": "A boilerplate project for static website using sass",
+  "description": "ルークコードゴルフ大会の特設サイト。",
   "private": true,
   "scripts": {
     "build": "npm run build:prod",
