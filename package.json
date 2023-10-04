@@ -14,7 +14,7 @@
     "clean": "rm -rf public"
   },
   "author": "",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "devDependencies": {
     "css-loader": "^6.8.1",
     "html-loader": "^4.2.0",
