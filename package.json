@@ -1,7 +1,7 @@
 {
-  "name": "sass-boilerplate",
+  "name": "rook-codegolf2023",
   "version": "1.0.0",
-  "description": "A boilerplate project for static website using sass",
+  "description": "ルークコードゴルフ大会の特設サイト。",
   "private": true,
   "scripts": {
     "build": "npm run build:prod",
@@ -10,13 +10,18 @@
     "prebuild:prod": "npm run clean",
     "build:prod": "webpack --mode=production --node-env=production",
     "dev": "webpack serve --watch-files=src --mode=development",
-    "format": "prettier --write src",
+    "lint": "eslint --fix .",
+    "lint:check": "eslint .",
     "clean": "rm -rf public"
   },
   "author": "",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "devDependencies": {
     "css-loader": "^6.8.1",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.3",
     "prettier": "^3.0.3",
     "sass": "^1.68.0",
