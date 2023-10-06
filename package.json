@@ -12,6 +12,8 @@
     "dev": "webpack serve --watch-files=src --mode=development",
     "lint": "eslint --fix .",
     "lint:check": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "clean": "rm -rf public"
   },
   "author": "",
