@@ -1,12 +1,247 @@
 <!doctype html>
-<html>
+<html lang="ja">
   <head>
-    <title>Hello World</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>rook-codegolf2023</title>
+    <script src="scripts/pace.js"></script>
+    <link rel="stylesheet" href="sass/loader.css" />
+    <!-- reset.css destyle -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
+    <link rel="stylesheet" href="sass/index.css" />
   </head>
   <body>
-    <div class="container">
-      <img src="./assets/face.png" />
-      <div class="hello-world">Hello World!</div>
+    <div id="global-container">
+      <div class="container">
+        <header class="header">
+          <div class="header__inner">
+            <div class="header__logo">
+              <a href="#">
+                <img class="logo__img" src="assets/header_logo.svg" />
+              </a>
+            </div>
+            <nav class="header__nav">
+              <ul class="header__ul">
+                <li class="header__li item"><a href="#">トップ</a></li>
+                <li class="header__li item"><a href="#">コードゴルフとは?</a></li>
+                <li class="header__li item"><a href="#">大会概要</a></li>
+                <li class="header__li item"><a href="#">賞品</a></li>
+                <li class="header__li item"><a href="#">エントリー</a></li>
+                <li class="header__li item"><a href="#">Q&A</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <main class="main">
+          <div class="top">
+            <div class="top__left">
+              <div class="top__leftCloud1"></div>
+              <div class="top__leftCloud2"></div>
+            </div>
+            <div class="top__center">
+              <span class="bold">コードゴルフで</span><br />
+              <span class="bold">豪華賞品を手に入れよう!</span>
+              <h5>ROOK</h5>
+              <h5>CODE</h5>
+              <h5>GOLF</h5>
+              <span class="bold">12.4(月)~12.18(月)</span>
+            </div>
+            <div class="top__right">
+              <div class="top__rightCloud1"></div>
+              <div class="top__rightCloud2"></div>
+              <div class="top__rightCloud3"></div>
+              <div class="top__rightCloud4"></div>
+            </div>
+          </div>
+          <div class="section1">
+            <div class="section1__inner">
+              <div class="section1__title">
+                <h1>コードゴルフって？</h1>
+                <span>コードゴルフとは、あるお題のプログラムを</span><br />
+                <span><span class="bold">できるだけ短い文字数で</span>作成する遊びです。</span>
+              </div>
+              <div class="section1__subTitle">
+                <h1>サンプル問題を見てみよう</h1>
+                <span>実際に、どのように短いコードを作成するか見てみましょう</span><br />
+                <span>※この問題はサンプル用の問題です。</span>
+              </div>
+              <div class="section1__sample">
+                <div class="section1__question">
+                  <div class="question__title">
+                    <span class="bold">サンプル</span>
+                    <h1>問題</h1>
+                  </div>
+                  <div class="question__sentence">
+                    <span>コンソールに1から順番に整数を100行出力してください。</span><br />
+                    <span>
+                      ただし、その整数が3の倍数である場合は整数の代わりに “Fizz” を、5の倍数である場合は整数の代わりに
+                      “Buzz” を出力してください。 </span
+                    ><br />
+                    <span
+                      >また、3の倍数かつ5の倍数（つまり、15の倍数）である場合には “Fizzbuzz” を出力してください。</span
+                    >
+                  </div>
+                </div>
+                <div class="section1__example">
+                  <div class="example__title">
+                    <span class="bold">サンプル</span>
+                    <h1>実装例</h1>
+                  </div>
+                  <div class="example__implementation">
+                    <span>for (let i = 1; i <= 100; i++) {</span><br />
+                    <span>　if (i % 15 == 0) {</span><br />
+                    <span>　　console.log('FizzBuzz');</span><br />
+                    <span>　} else if (i % 3 == 0) {</span><br />
+                    <span>　　console.log('Fizz');</span><br />
+                    <span>　} else if (i % 5 == 0) {</span><br />
+                    <span>　　console.log('Buzz');</span><br />
+                    <span>　} else {</span><br />
+                    <span>　　console.log(i);</span><br />
+                    <span>　}</span><br />
+                    <span>}</span><br />
+                    <span> </span><br />
+                  </div>
+                </div>
+              </div>
+              <div class="section1__text">
+                <span>この問題でコードゴルフをすると・・・</span>
+              </div>
+              <div class="section1__answer">
+                <div class="example__title">
+                  <span class="bold">サンプル</span>
+                  <h1>コード</h1>
+                </div>
+                <div class="example__implementation">
+                  <span>for (let i = 1; i <= 100; i++) {</span><br />
+                  <span>　if (i % 15 == 0) { </span><br />
+                  <span>　　console.log('FizzBuzz');</span><br />
+                  <span>　} else if (i % 3 == 0) {</span><br />
+                  <span>　　console.log('Fizz');</span><br />
+                  <span>　} else if (i % 5 == 0) {</span><br />
+                  <span>　　console.log('Buzz');</span><br />
+                  <span>　} else {</span><br />
+                  <span>　　console.log(i);</span><br />
+                  <span>　}</span><br />
+                  <span>}</span><br />
+                  <span> </span><br />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section2">
+            <div class="section2__inner">
+              <div class="section2__title">
+                <h1>大会概要</h1>
+              </div>
+              <div class="section2__info">
+                <table>
+                  <tr class="info__row1">
+                    <th>応募資格</th>
+                    <td>大会期間中、株式会社ルークの正社員であること</td>
+                  </tr>
+                  <tr class="info__row2">
+                    <th>スケジュール</th>
+                    <td>
+                      <ul>
+                        <li>12/4（月）問題発表・エントリー開始</li>
+                        <li>12/18（月）23:59 エントリー締切</li>
+                        <li>12/25（月） 結果発表</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr class="info__row3">
+                    <th>プログラミング言語</th>
+                    <td>JavaScript （Node.js バージョン18）</td>
+                  </tr>
+                  <tr class="info__row4">
+                    <th>ルール</th>
+                    <td>
+                      <span> 問題発表時に、作成するプログラムのお題と、</span><br />
+                      <span>そのお題の実装例コード※が発表されます。</span><br />
+                      <span>お題のプログラムを<span class="bold">できるだけ短いコードで</span>作成してください。</span
+                      ><br />
+                      <p>※実装例コードは、お題のプログラムの一例であり、必ずしも正解ではありません。</p>
+                      <p>応募する際、このコードを修正して短くしていくことも、一からコードを作成することもできます。</p>
+                    </td>
+                  </tr>
+                  <tr class="info__row5">
+                    <th></th>
+                    <td>
+                      <ul>
+                        <li>
+                          <p>
+                            インターネット上のコードを参考にしたり、ツールなどを使用してプログラムを作成することは可能ですが、ソースコードの著作者はエントリーした本人でなければなりません。
+                          </p>
+                        </li>
+                        <li>
+                          <p>
+                            コードの長さは、UTF-8エンコード時のバイト数でカウントします。ひらがななどを使用すると文字数よりも長くカウントされますのでご注意ください。
+                          </p>
+                        </li>
+                        <li>
+                          <p>コードはNode.jsで実行します。ブラウザ固有の機能は使用できませんのでご注意ください。</p>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="section2__entry">
+                <a href="#"><h1>問題・エントリーはこちら</h1></a>
+              </div>
+            </div>
+          </div>
+          <div class="section3">
+            <div class="section3__inner">
+              <div class="section3__title">
+                <h1>賞品</h1>
+              </div>
+              <div class="section3__text">
+                <span>あなたの書いたコードの短さに応じて、豪華賞品がもらえます！</span><br />
+                <p>
+                  まったく同じスコアの応募が複数あった場合、賞品はランダムに決定しますのであらかじめご了承ください。
+                </p>
+              </div>
+              <div class="section3__prize">
+                <div class="prize">
+                  <div class="prize__1">
+                    <h1>1位</h1>
+                    <span>15.6インチ モバイルモニター</span><br />
+                    <div class="prize__img">
+                      <span>image</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="prize">
+                  <div class="prize__2">
+                    <span class="bold">2位</span>
+                    <div class="prize__img"><span>image</span><span>USBメモリ型外付けSSD USB type-C端子</span></div>
+                  </div>
+                  <div class="prize__3">
+                    <span class="bold">3位</span>
+                    <div class="prize__img"><span>image</span><span>65W USB PowerDelivery対応 充電器</span></div>
+                  </div>
+                  <div class="prize__4">
+                    <h1>特別賞</h1>
+                    <span>面白い工夫をしてくれた解答には、</span><br />
+                    <span>特別賞をプレゼントします！、</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section4">
+            <h1>提供</h1>
+            <img src="assets/header_logo.svg" /><br />
+            <span class="bold">株式会社ルーク</span>
+          </div>
+        </main>
+        <footer class="footer">
+          <span>&copy; rook-codegolf2023 運営チーム</span><br />
+          <a href="#"><img src="assets/github-mark.svg" /></a>
+        </footer>
+      </div>
     </div>
   </body>
 </html>
