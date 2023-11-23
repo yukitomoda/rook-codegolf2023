@@ -362,19 +362,63 @@ h5 {
             width: 75%;
             display: flex;
             justify-content: space-between;
+            align-items: start;
             text-align: left;
             padding: 1rem;
 
-            .prize {
-                &__1 {
-                    .prize__img {
-                        width: 13rem;
-                        height: 10rem;
-                        background-color: red;
-                        text-align: center;
-                        padding-top: 4rem;
-                        margin-top: 1rem;
+            .prize-1 {
+                width: 50%;
+                display: flex;
+                margin: 0.5rem 1rem;
+
+                &__img {
+                    width: 5rem;
+                }
+
+                &__rank {
+                    font-size: 5rem;
+                }
+
+                &__item-name {
+                    font-size: 2rem;
+                }
+            }
+
+            .prize-others {
+                width: 50%;
+
+                .prize-others-item {
+                    margin: 0.5rem 1rem;
+                    display: flex;
+
+                    &__img {
+                        width: 3rem;
                     }
+
+                    &__rank {
+                        font-size: 3rem;
+                    }
+
+                    &__item-name {
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            .prize-special {
+                display: flex;
+                margin: 0.5rem 1rem;
+
+                &__dummy-img {
+                    width: 3rem;
+                }
+
+                &__title {
+                    font-size: 3rem;
+                }
+
+                &__details {
+                    font-size: 1rem;
                 }
             }
         }
