@@ -33,3 +33,20 @@ npm run format:check
 
 masterから新しくブランチを切って開発し、masterへのプルリクエストを出してください。
 プルリクエスト作成時にformatter, linterによるチェックとwebpackのビルド（バンドル）のチェックが行われるので、事前にチェックが通るようにしておいてください。
+
+### ファイル追加のてびき
+
+#### 画像
+
+1. `src/` 以下に追加する
+2. `index.html` で参照する
+
+#### JavaScript, Sass
+
+1. `src/` 以下に追加する
+2. `index.js` でインポートする
+
+#### npm パッケージ
+
+1. `npm i -D {package-name}` で追加する
+2. JavaScriptでインポート、使用する
