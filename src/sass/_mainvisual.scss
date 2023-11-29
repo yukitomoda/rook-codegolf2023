@@ -1,0 +1,67 @@
+@import "variables";
+
+.mainvisual {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 100;
+    background-image: url(../assets/8586397.jpg);
+    background-position-y: 35%;
+    background-position-x: 75%;
+    background-size: auto;
+    align-items: center;
+    justify-content: center;
+
+    &__container {
+        width: 100%;
+    }
+
+    &__text--bold {
+        font-size: $textFontSize;
+        color: $fontColor;
+        text-align: center;
+        font-family: $fontFamily;
+        font-size: $textFontSize;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__title {
+        color: $fontColor;
+        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+        text-align: center;
+        font-family: Rubik Mono One;
+        font-size: 8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__date {
+        text-align: center;
+
+        &__text {
+            color: $fontColor;
+            font-family: Noto Sans JP;
+            font-size: 2.5rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        &__text--small {
+            color: $fontColor;
+            font-family: Noto Sans JP;
+            font-size: $textFontSize;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+
+    &__author {
+        text-align: right;
+        color: rgba(255, 255, 255, 0.2);
+    }
+}
