@@ -38,6 +38,12 @@
         line-height: normal;
     }
 
+    &__title-logo {
+        height: 50vh;
+        max-height: 600px;
+        max-width: 80vw;
+    }
+
     &__date {
         text-align: center;
 

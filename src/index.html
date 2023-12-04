@@ -32,9 +32,9 @@
         <div class="mainvisual__container">
           <div class="mainvisual__text--bold">コードゴルフで</div>
           <div class="mainvisual__text--bold">豪華賞品を手に入れよう！</div>
-          <div class="mainvisual__title">ROOK</div>
-          <div class="mainvisual__title">CODE</div>
-          <div class="mainvisual__title">GOLF</div>
+          <div class="mainvisual__title">
+            <img src="./assets/code-golf-logo.svg" class="mainvisual__title-logo" />
+          </div>
           <div class="mainvisual__date">
             <span class="mainvisual__date__text">12.4</span>
             <span class="mainvisual__date__text--small">(月)～</span>
@@ -233,64 +233,40 @@
           <div class="prize__text--small">
             まったく同じスコアの応募が複数あった場合、賞品はランダムに決定しますのであらかじめご了承ください。
           </div>
-          <table class="prize__list">
-            <tbody>
-              <tr class="list__item">
-                <td rowspan="3" class="list__item--left">
-                  <div class="item__title">1位</div>
-                  <div class="item__name">15.6インチ モバイルモニター</div>
-                  <div class="item__image"></div>
-                </td>
-                <td class="list__item--right">
-                  <div class="item__row">
-                    <div class="item__title">2位</div>
-                  </div>
-                  <div class="item__row">
-                    <div class="item__col">
-                      <div class="item__image"></div>
-                    </div>
-                    <div class="item__col">
-                      <div class="item__name">USBメモリ型外付けSSD</div>
-                      <div class="item__name--small">USB type-C端子</div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr class="list__item">
-                <td class="list__item--right">
-                  <div class="item__row">
-                    <div class="item__title">3位</div>
-                  </div>
-                  <div class="item__row">
-                    <div class="item__col">
-                      <div class="item__image"></div>
-                    </div>
-                    <div class="item__col">
-                      <div class="item__name">65W USB PowerDelivery対応 充電器</div>
-                      <div class="item__name--small">USB type-C端子</div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr class="list__item">
-                <td class="list__item--right">
+          <div class="prize__list">
+            <div class="list">
+              <div class="list__item">
+                <div class="item__title">
+                  <img class="item__image" src="./assets/prizes/monitor.svg" />
+                  <span>1位</span>
+                </div>
+                <div class="item__name">15.6インチ モバイルモニター</div>
+              </div>
+              <div class="list__item">
+                <div class="item__title">
+                  <img class="item__image" src="./assets/prizes/usb-memory.svg" />
+                  <span>2位</span>
+                </div>
+                <div class="item__name">USBメモリ型外付けSSD</div>
+                <div class="item__name--small">USB type-C端子</div>
+              </div>
+              <div class="list__item">
+                <div class="item__title">
+                  <img class="item__image" src="./assets/prizes/plug.svg" />
+                  <span>3位</span>
+                </div>
+                <div class="item__name">65W USB PowerDelivery対応 充電器</div>
+                <div class="item__name--small">USB type-C端子</div>
+              </div>
+              <div class="list__item">
+                <div class="item__title">
                   <div class="item__title">特別賞</div>
-                  <div class="item__text">面白い工夫をしてくれた解答には、</div>
-                  <div class="item__text">特別賞をプレゼントします！</div>
-                </td>
-              </tr>
-              <tr class="list__item">
-                <td colspan="2" class="list__item--bottom">
-                  <div class="item__text">
-                    <span class="item__text--small item__text--red">TODO:</span>
-                    <span class="item__text--small"
-                      >画像はすべて (TODO) により生成されたイメージ画像です。実際の賞品とは異なります。</span
-                    >
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                </div>
+                <div class="item__text">面白い工夫をしてくれた解答には、</div>
+                <div class="item__text">特別賞をプレゼントします！</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section class="form">
