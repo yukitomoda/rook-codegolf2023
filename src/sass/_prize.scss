@@ -72,74 +72,34 @@
         .list__item {
             padding: 0.625rem;
 
-            &--left {
-                width: 25rem;
-
-                .item__title {
-                    color: #000;
-                    text-align: left;
-                    font-family: Noto Sans JP;
-                    font-size: 3rem;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: 100%;
-                    padding: 0.625rem;
-                }
-
-                .item__name {
-                    color: #000;
-                    font-family: Noto Sans JP;
-                    font-size: 1.25rem;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                    padding: 0.625rem;
-                }
-
-                .item__image {
-                    width: 16rem;
-                    height: 16rem;
-                    background-image: url(../assets/header_logo.svg);
-                    background-size: cover;
-                    padding: 0.625rem;
-                }
+            .item__title {
+                display: flex;
+                align-items: center;
+                color: #000;
+                text-align: left;
+                font-family: Noto Sans JP;
+                font-size: 3rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%;
+                padding: 0.625rem;
             }
 
-            &--right {
-                .item__row {
-                    padding: 0.625rem;
-                    gap: 0.625rem;
+            .item__name {
+                color: #000;
+                font-family: Noto Sans JP;
+                font-size: 1.25rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                padding: 0.625rem;
+            }
 
-                    .item__col {
-                        display: inline-block;
-                    }
-                }
-                .item__title {
-                    color: #000;
-                    text-align: left;
-                    font-family: Noto Sans JP;
-                    font-size: 2rem;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: 100%;
-                }
-
-                .item__name,
-                .item__text {
-                    color: #000;
-                    font-family: Noto Sans JP;
-                    font-size: 1.25rem;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                }
-
-                .item__image {
-                    width: 4rem;
-                    height: 4rem;
-                    background-image: url(../assets/header_logo.svg);
-                    background-size: cover;
-                }
+            .item__image {
+                width: 5rem;
+                height: 5rem;
+                background-size: cover;
+                padding: 0.625rem;
             }
 
             &--bottom {
