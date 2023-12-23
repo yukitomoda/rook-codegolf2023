@@ -8,3 +8,7 @@
 @import "inquiry";
 @import "company";
 @import "footer";
+
+html {
+    scroll-behavior: smooth;
+}

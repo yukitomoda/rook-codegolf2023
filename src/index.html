@@ -13,21 +13,28 @@
   </head>
   <body>
     <div id="global-container">
-      <header class="header">
-        <div class="header__container">
-          <div class="header__logo">
-            <a class="header__logo--link" href="#"><img src="assets/header_logo.svg" /></a>
-          </div>
-          <ul class="header__nav">
-            <li class="nav__item"><a href="#">トップ</a></li>
-            <li class="nav__item"><a href="#">コードゴルフとは?</a></li>
-            <li class="nav__item"><a href="#">大会概要</a></li>
-            <li class="nav__item"><a href="#">賞品</a></li>
-            <li class="nav__item"><a href="#">エントリー</a></li>
-            <li class="nav__item"><a href="#">Q&A</a></li>
-          </ul>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#">
+            <img src="assets/header_logo.svg" />
+          </a>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
         </div>
-      </header>
+
+        <div id="navbar-menu" class="navbar-menu">
+          <div class="navbar-start">
+            <li class="navbar-item"><a href="#section-whats-codegolf">コードゴルフとは？</a></li>
+            <li class="navbar-item"><a href="#section-competition">大会概要</a></li>
+            <li class="navbar-item"><a href="#section-prize">賞品</a></li>
+            <li class="navbar-item"><a href="#section-entry">エントリー</a></li>
+            <li class="navbar-item"><a href="#section-qa">Q&A</a></li>
+          </div>
+        </div>
+      </nav>
       <section class="mainvisual">
         <div class="mainvisual__container">
           <div class="mainvisual__text--bold">コードゴルフで</div>
@@ -36,17 +43,17 @@
             <img src="./assets/code-golf-logo.svg" class="mainvisual__title-logo" />
           </div>
           <div class="mainvisual__date">
-            <span class="mainvisual__date__text">12.4</span>
-            <span class="mainvisual__date__text--small">(月)～</span>
-            <span class="mainvisual__date__text">12.18</span>
+            <span class="mainvisual__date__text">1.9</span>
+            <span class="mainvisual__date__text--small">(火)～</span>
+            <span class="mainvisual__date__text">1.15</span>
             <span class="mainvisual__date__text--small">(月)</span>
           </div>
           <div class="mainvisual__author">著作者：Freepik</div>
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="section-whats-codegolf">
         <div class="about__container">
-          <div class="about__title">コードゴルフって?</div>
+          <div class="about__title">コードゴルフって？</div>
           <div class="about__text">コードゴルフとは、あるお題のプログラムを</div>
           <div class="about__text">
             <span class="about__text--bold">できるだけ短い文字数で</span> 作成する遊びです。
@@ -116,7 +123,7 @@
           </div>
         </div>
       </section>
-      <section class="desc">
+      <section class="desc" id="section-competition">
         <div class="desc__container">
           <div class="desc__title">大会概要</div>
           <table class="desc__list">
@@ -218,11 +225,11 @@
             </tbody>
           </table>
           <div class="desc__button">
-            <a href="#">問題・エントリーはこちら</a>
+            <a href="#section-entry">問題・エントリーはこちら</a>
           </div>
         </div>
       </section>
-      <section class="prize">
+      <section class="prize" id="section-prize">
         <div class="prize__container">
           <div class="prize__title">賞品</div>
           <div class="prize__text">
@@ -269,7 +276,7 @@
           </div>
         </div>
       </section>
-      <section class="form">
+      <section class="form" id="section-entry">
         <div class="form__container">
           <div class="form__title">問題・エントリーフォーム</div>
           <div class="form__card">
@@ -322,7 +329,7 @@
           </div>
         </div>
       </section>
-      <section class="inquiry">
+      <section class="inquiry" id="section-qa">
         <div class="inquiry__container">
           <div class="inquiry__title">Q&A</div>
           <table class="inquiry__card">
