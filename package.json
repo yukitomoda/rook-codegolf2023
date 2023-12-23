@@ -19,6 +19,7 @@
   "author": "",
   "license": "UNLICENSED",
   "devDependencies": {
+    "bulma": "^0.9.4",
     "css-loader": "^6.8.1",
     "destyle.css": "^4.0.0",
     "eslint": "^8.50.0",
