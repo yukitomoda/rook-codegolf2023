@@ -1,0 +1,61 @@
+.qa-item {
+    @include until-widescreen {
+        width: 95%;
+    }
+
+    @include widescreen {
+        width: 70%;
+    }
+
+    &__q {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__q-title {
+        width: 3rem;
+        text-align: end;
+        font-family: var(--generic-font-monospace);
+        font-size: 2.5rem;
+        font-weight: 700;
+        flex-shrink: 0;
+        margin-right: 0.5rem;
+    }
+
+    &__q-content {
+        padding-top: 1rem;
+        text-align: start;
+        font-size: 1.5rem;
+    }
+
+    &__a {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__a-title {
+        width: 3rem;
+        text-align: end;
+        font-family: var(--generic-font-monospace);
+        font-size: 2.5rem;
+        font-weight: 700;
+        flex-shrink: 0;
+        margin-right: 0.5rem;
+    }
+
+    &__a-content {
+        padding-top: 1rem;
+        text-align: start;
+        font-size: 1.5rem;
+    }
+
+    &__text {
+        &--em {
+            font-weight: 700;
+        }
+
+        &--small {
+            font-size: 0.9rem;
+        }
+    }
+}

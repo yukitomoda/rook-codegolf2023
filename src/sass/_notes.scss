@@ -1,0 +1,10 @@
+.notes {
+    list-style: disc;
+    font-size: 0.9rem;
+
+    &__text {
+        &--em {
+            font-weight: 700;
+        }
+    }
+}

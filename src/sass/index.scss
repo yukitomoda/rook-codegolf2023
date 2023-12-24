@@ -1,14 +1,51 @@
 @import "../../node_modules/bulma/bulma.sass";
-@import "header";
 @import "mainvisual";
-@import "about";
-@import "desc";
-@import "prize";
-@import "form";
-@import "inquiry";
-@import "company";
+
+@import "navbar";
+@import "section";
+@import "table";
+@import "notes";
+@import "prize-info";
+@import "entry-caution";
+@import "qa-item";
+@import "supporter-view";
 @import "footer";
+
+:root {
+    --generic-font: "Noto Sans JP";
+    --generic-font-monospace: "Noto Sans Mono";
+}
 
 html {
     scroll-behavior: smooth;
+    font-family: var(--generic-font);
+}
+
+pre {
+    text-align: left;
+    font-family: var(--generic-font-monospace);
+}
+
+.card {
+    text-align: left;
+}
+
+#section-whats-codegolf {
+    --section-main-color: #b3eac2;
+}
+
+#section-competition {
+    --section-main-color: #9ec2a8;
+}
+
+#section-prize {
+    --section-main-color: #cef9a4;
+}
+
+#section-entry {
+    --section-main-color: #d0ddc2;
+}
+
+#section-qa {
+    --section-main-color: #cecece;
 }
