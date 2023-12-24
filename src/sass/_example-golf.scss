@@ -1,0 +1,15 @@
+.example-golf {
+    min-height: 25em;
+
+    @include until-widescreen {
+        min-width: 95%;
+    }
+
+    @include widescreen {
+        min-width: 60%;
+    }
+
+    &__comment {
+        text-align: start;
+    }
+}
