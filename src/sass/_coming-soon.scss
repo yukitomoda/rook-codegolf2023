@@ -1,0 +1,32 @@
+.coming-soon {
+    background-color: #def;
+
+    &__title {
+        margin: 1rem;
+        font-size: 2rem;
+        font-family: var(--font-pop);
+    }
+
+    &__image {
+        height: 300px;
+    }
+
+    &__image-credit {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        font-size: 0.9rem;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+
+        &--em {
+            font-weight: 700;
+        }
+
+        &--small {
+            font-size: 0.9rem;
+        }
+    }
+}
