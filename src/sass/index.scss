@@ -18,11 +18,37 @@
     --generic-font: "Noto Sans JP";
     --generic-font-monospace: "Noto Sans Mono";
     --font-pop: "Titan One";
+
+    @include touch {
+        --font-size-xx-large: 2rem;
+        --font-size-x-large: 1.6rem;
+        --font-size-large: 1.25rem;
+        --font-size-normal: 1rem;
+        --font-size-small: 0.8rem;
+    }
+
+    @include desktop {
+        --font-size-xx-large: 2.5rem;
+        --font-size-x-large: 1.8rem;
+        --font-size-large: 1.3rem;
+        --font-size-normal: 1rem;
+        --font-size-small: 0.8rem;
+    }
 }
 
 html {
     scroll-behavior: smooth;
     font-family: var(--generic-font);
+
+    @include mobile {
+        font-size: 12px;
+    }
+    @include tablet {
+        font-size: 14px;
+    }
+    @include desktop {
+        font-size: 16px;
+    }
 }
 
 pre {

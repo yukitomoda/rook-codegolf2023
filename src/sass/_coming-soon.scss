@@ -3,7 +3,7 @@
 
     &__title {
         margin: 1rem;
-        font-size: 2rem;
+        font-size: var(--font-size-large);
         font-family: var(--font-pop);
     }
 
@@ -15,18 +15,18 @@
         position: relative;
         bottom: 0;
         right: 0;
-        font-size: 0.9rem;
+        font-size: var(--font-size-small);
     }
 
     &__text {
-        font-size: 1.5rem;
+        font-size: var(--font-size-large);
 
         &--em {
             font-weight: 700;
         }
 
         &--small {
-            font-size: 0.9rem;
+            font-size: var(--font-size-small);
         }
     }
 }
