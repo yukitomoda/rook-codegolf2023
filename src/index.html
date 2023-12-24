@@ -121,57 +121,116 @@
             <div class="box example-golf">
               <div class="tabs" data-tab-group="codegolf-example">
                 <ul>
-                  <li class="is-active" data-tab-id="1"><a>Pictures</a></li>
-                  <li data-tab-id="2"><a>Music</a></li>
-                  <li data-tab-id="3"><a>Videos</a></li>
-                  <li data-tab-id="4"><a>Documents</a></li>
+                  <li class="is-active" data-tab-id="1"><a>1. 大量のif文を削減！</a></li>
+                  <li data-tab-id="2"><a>2. 式をまとめて...</a></li>
+                  <li data-tab-id="3"><a>3. 1文字を攻める！</a></li>
+                  <li data-tab-id="4"><a>4. 完成！</a></li>
                 </ul>
               </div>
               <div class="tab-panes" data-tab-group="codegolf-example">
                 <div class="tab-pane" data-tab-id="1">
-                  <div class="columns is-desktop">
-                    <div class="column example-golf__code">
-                      <pre><code class="language-js">// TODO
-for (let i = 1; i &lt;= 100; i++) { 
-  if (i % 15 == 0) { 
-      console.log('FizzBuzz'); 
-  } else if (i % 3 == 0) { 
-      console.log('Fizz'); 
-  } else if (i % 5 == 0) { 
-      console.log('Buzz'); 
-  } else { 
-      console.log(i); 
-  }
-}</code></pre>
+                  <div class="columns">
+                    <div class="column is-half">
+                      <div class="example-golf__code">
+                        <pre><code class="language-js">function fizzbuzz(first, last) {
+  const numbers = Array.from(Array(last), (value, idx) =&#62; idx + 1);
+  numbers.forEach((idx) =&#62;
+    console.log(!(idx % 15)
+      ? "FizzBuzz"
+      : (!(idx % 5)
+        ? "Buzz"
+        : (!(idx % 3) ? "Fizz" : idx))));
+}
+fizzbuzz(1, 100);</code></pre>
+                      </div>
                     </div>
-                    <div class="column example-golf__comment">
-                      <p></p>
+                    <div class="column is-half">
+                      <div class="example-golf__comment">
+                        <div class="example-golf__charcter-count">273文字</div>
+                        <ul class="example-golf__point">
+                          <li>事前に 1-100 の数値が入った配列を作成して for 文を削減</li>
+                          <li>処理全体を条件演算子の式にまとめて、 <code>console.log</code>を一つにまとめた</li>
+                          <li><code>!(0)</code> が真になることなどを利用して、比較演算子<code>===</code>を削減</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="tab-pane" data-tab-id="2">b</div>
-                <div class="tab-pane" data-tab-id="3">c</div>
-                <div class="tab-pane" data-tab-id="4">d</div>
-              </div>
-            </div>
-            <div class="card section__card">
-              <div class="card-header">
-                <div class="card-header-title">ゴルフ例</div>
-              </div>
-              <div class="card-content">
-                <div class="content">
-                  <pre><code class="language-js">// TODO
-for (let i = 1; i &lt;= 100; i++) { 
-  if (i % 15 == 0) { 
-      console.log('FizzBuzz'); 
-  } else if (i % 3 == 0) { 
-      console.log('Fizz'); 
-  } else if (i % 5 == 0) { 
-      console.log('Buzz'); 
-  } else { 
-      console.log(i); 
-  }
-}</code></pre>
+                <div class="tab-pane" data-tab-id="2">
+                  <div class="columns">
+                    <div class="column is-half">
+                      <div class="example-golf__code">
+                        <pre><code class="language-js">fizzbuzz = (idx, last) =&#62; {
+  while(idx &lt;= last)
+    console.log(idx % 15
+      ? (idx % 5
+        ? (idx % 3 ? idx : "Fizz")
+        : "Buzz")
+      : "FizzBuzz")
+    || idx++
+}
+fizzbuzz(1, 100);</code></pre>
+                      </div>
+                    </div>
+                    <div class="column is-half">
+                      <div class="example-golf__comment">
+                        <div class="example-golf__charcter-count">196文字</div>
+                        <ul class="example-golf__point">
+                          <li>
+                            関数定義にアロー関数<code>() => ...</code>を使用して、<code>function</code>等の文字を削減
+                          </li>
+                          <li>ループに <code>while</code>を採用し、文字数を削減</li>
+                          <li>条件を逆にして、<code>!()</code>を削減</li>
+                        </ul>
+                        など...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" data-tab-id="3">
+                  <div class="columns">
+                    <div class="column is-half">
+                      <div class="example-golf__code">
+                        <pre><code class="language-js">idx = 1;
+while(idx &lt; 101)
+  console.log(
+    (
+      (idx % 3 ? "" : "Fizz")
+      + (idx % 5 ? "" : "Buzz"))
+    || idx)
+  , idx++</code></pre>
+                      </div>
+                    </div>
+                    <div class="column is-half">
+                      <div class="example-golf__comment">
+                        <div class="example-golf__charcter-count">138文字</div>
+                        <ul class="example-golf__point">
+                          <li>関数の定義自体をなくして、そのまま実行するように</li>
+                          <li>15の倍数のとき、3の倍数のときの結果と5の倍数のときの結果を足してFizzBuzzを作成</li>
+                          <li><code>&lt;=</code>の代わりに<code>&lt;</code>を使用して、1文字削減</li>
+                          <li>最後の <code>|| idx++</code> の代わりに<code>, idx++</code> を使用して、1文字削減</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" data-tab-id="4">
+                  <div class="columns">
+                    <div class="column is-half">
+                      <div class="example-golf__code">
+                        <pre><code class="language-js">i=1;while(i&lt;101)console.log(((i%3?"":"Fizz")+(i%5?"":"Buzz"))||i),i++</code></pre>
+                      </div>
+                    </div>
+                    <div class="column is-half">
+                      <div class="example-golf__comment">
+                        <div class="example-golf__charcter-count">69文字</div>
+                        <ul class="example-golf__point">
+                          <li>変数名を一文字に変更</li>
+                          <li>不要なスペースを削除</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
