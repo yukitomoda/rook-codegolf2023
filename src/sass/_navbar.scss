@@ -1,0 +1,12 @@
+.navbar {
+    /* bulma navbar component */
+    top: 0;
+    position: sticky;
+
+    .navbar-menu {
+        @include touch {
+            position: fixed;
+            width: 100%;
+        }
+    }
+}

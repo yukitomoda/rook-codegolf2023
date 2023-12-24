@@ -1,0 +1,115 @@
+.section {
+    background-color: var(--section-main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__container {
+        @include mobile {
+            width: 100%;
+            padding: 0.3rem;
+        }
+        @include tablet {
+            width: 85%;
+            padding: 1rem;
+        }
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        border-radius: 1rem;
+        border: 16px solid rgba(255, 255, 255, 0.7);
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    &__title {
+        text-align: center;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        text-wrap: nowrap;
+        color: black;
+        font-size: var(--font-size-xx-large);
+        font-weight: 700;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+
+    &__subsection {
+        @include mobile {
+            padding: 0.3rem;
+        }
+        @include tablet {
+            padding: 0.6rem;
+        }
+
+        text-align: center;
+        font-size: var(--font-size-normal);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &--row {
+            @include mobile {
+                padding: 0.3rem;
+            }
+            @include tablet {
+                padding: 0.6rem;
+            }
+
+            text-align: center;
+            font-size: var(--font-size-normal);
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            margin: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        &--stretch {
+            @include mobile {
+                padding: 0.3rem;
+            }
+            @include tablet {
+                padding: 0.6rem;
+            }
+
+            text-align: center;
+            font-size: var(--font-size-normal);
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            margin: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        font-size: var(--font-size-normal);
+        font-weight: 400;
+        line-height: normal;
+
+        &--em {
+            font-weight: 700;
+        }
+
+        &--small {
+            font-size: var(--font-size-small);
+        }
+    }
+}

@@ -1,12 +1,533 @@
 <!doctype html>
-<html>
+<html lang="ja">
   <head>
-    <title>Hello World</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>rook-codegolf2023</title>
+    <!-- font.css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap&family=Noto+Sans+Mono:wght@400;700&family=Titan+One"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="container">
-      <img src="./assets/face.png" />
-      <div class="hello-world">Hello World!</div>
+    <div id="global-container">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#">
+            <img src="assets/code-golf-logo.svg" />
+          </a>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbar-menu" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="#section-whats-codegolf">コードゴルフとは？</a>
+            <a class="navbar-item" href="#section-competition">大会概要</a>
+            <a class="navbar-item" href="#section-prize">賞品</a>
+            <a class="navbar-item" href="#section-entry">エントリー</a>
+            <a class="navbar-item" href="#section-qa">Q&A</a>
+          </div>
+        </div>
+      </nav>
+
+      <section class="mainvisual">
+        <div class="mainvisual__container">
+          <div class="mainvisual__slogan">
+            コードゴルフで<br />
+            豪華賞品を手に入れよう！
+          </div>
+          <div class="mainvisual__title">
+            <img src="./assets/code-golf-logo.svg" class="mainvisual__title-logo" />
+          </div>
+          <div class="mainvisual__date">
+            <span class="mainvisual__date__text">1.9</span>
+            <span class="mainvisual__date__text--small">(火)～</span>
+            <span class="mainvisual__date__text">1.15</span>
+            <span class="mainvisual__date__text--small">(月)</span>
+          </div>
+          <div class="mainvisual__author">
+            背景の著作者：<a
+              href="https://jp.freepik.com/free-vector/hand-drawn-golf-club-template-design_38237191.htm"
+              target="_blank"
+            >
+              Freepik
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="section-whats-codegolf">
+        <div class="section__container">
+          <div class="section__title">コードゴルフって？</div>
+          <div class="section__subsection">
+            <p>
+              コードゴルフとは、あるお題のプログラムを<br />
+              <span class="section__text--em">できるだけ短い文字数で</span> 作成する遊びです。
+            </p>
+          </div>
+          <div class="section__title">サンプル問題を見てみよう！</div>
+          <div class="section__subsection">
+            <p>
+              実際に、どのように短いコードを作成するか見てみましょう！<br />
+              <span class="section__text--small">※この問題はサンプル用の問題です。</span>
+            </p>
+          </div>
+          <div class="columns is-desktop">
+            <div class="column">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-header-title">サンプル問題</div>
+                </div>
+                <div class="card-content">
+                  <div class="content">
+                    コンソールに1から順番に整数を100行出力してください。
+                    ただし、その整数が3の倍数である場合は整数の代わりに“Fizz”を、
+                    5の倍数である場合は整数の代わりに“Buzz”を出力してください。
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-header-title">実装例</div>
+                </div>
+                <div class="card-content">
+                  <div class="content">
+                    <pre><code class="language-js">for (let i = 1; i &lt;= 100; i++) { 
+    if (i % 15 == 0) { 
+        console.log('FizzBuzz'); 
+    } else if (i % 3 == 0) { 
+        console.log('Fizz'); 
+    } else if (i % 5 == 0) { 
+        console.log('Buzz'); 
+    } else { 
+        console.log(i); 
+    } 
+}</code></pre>
+                    <span class="section__text--small">※実装例は問題発表時、同時に公表されます</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section__subsection">この問題でコードゴルフをすると・・・</div>
+          <div class="section__subsection">
+            <div class="box example-golf">
+              <div class="tabs" data-tab-group="codegolf-example">
+                <ul>
+                  <li class="is-active" data-tab-id="1"><a>1. 大量のif文を削減！</a></li>
+                  <li data-tab-id="2"><a>2. 式をまとめて...</a></li>
+                  <li data-tab-id="3"><a>3. 1文字を攻める！</a></li>
+                  <li data-tab-id="4"><a>4. 完成！</a></li>
+                </ul>
+              </div>
+              <div class="tab-panes" data-tab-group="codegolf-example">
+                <div class="tab-pane" data-tab-id="1">
+                  <div class="columns">
+                    <div class="column is-half">
+                      <div class="example-golf__code">
+                        <pre><code class="language-js">function fizzbuzz(first, last) {
+  const numbers = Array.from(Array(last), (value, idx) =&#62; idx + 1);
+  numbers.forEach((idx) =&#62;
+    console.log(!(idx % 15)
+      ? "FizzBuzz"
+      : (!(idx % 5)
+        ? "Buzz"
+        : (!(idx % 3) ? "Fizz" : idx))));
+}
+fizzbuzz(1, 100);</code></pre>
+                      </div>
+                    </div>
+                    <div class="column is-half">
+                      <div class="example-golf__comment">
+                        <div class="example-golf__charcter-count">273文字</div>
+                        <ul class="example-golf__point">
+                          <li>事前に 1-100 の数値が入った配列を作成して for 文を削減</li>
+                          <li>処理全体を条件演算子の式にまとめて、 <code>console.log</code>を一つにまとめた</li>
+                          <li><code>!(0)</code> が真になることなどを利用して、比較演算子<code>===</code>を削減</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" data-tab-id="2">
+                  <div class="columns">
+                    <div class="column is-half">
+                      <div class="example-golf__code">
+                        <pre><code class="language-js">fizzbuzz = (idx, last) =&#62; {
+  while(idx &lt;= last)
+    console.log(idx % 15
+      ? (idx % 5
+        ? (idx % 3 ? idx : "Fizz")
+        : "Buzz")
+      : "FizzBuzz")
+    || idx++
+}
+fizzbuzz(1, 100);</code></pre>
+                      </div>
+                    </div>
+                    <div class="column is-half">
+                      <div class="example-golf__comment">
+                        <div class="example-golf__charcter-count">196文字</div>
+                        <ul class="example-golf__point">
+                          <li>
+                            関数定義にアロー関数<code>() => ...</code>を使用して、<code>function</code>等の文字を削減
+                          </li>
+                          <li>ループに <code>while</code>を採用し、文字数を削減</li>
+                          <li>条件を逆にして、<code>!()</code>を削減</li>
+                        </ul>
+                        など...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" data-tab-id="3">
+                  <div class="columns">
+                    <div class="column is-half">
+                      <div class="example-golf__code">
+                        <pre><code class="language-js">idx = 1;
+while(idx &lt; 101)
+  console.log(
+    (
+      (idx % 3 ? "" : "Fizz")
+      + (idx % 5 ? "" : "Buzz"))
+    || idx)
+  , idx++</code></pre>
+                      </div>
+                    </div>
+                    <div class="column is-half">
+                      <div class="example-golf__comment">
+                        <div class="example-golf__charcter-count">138文字</div>
+                        <ul class="example-golf__point">
+                          <li>関数の定義自体をなくして、そのまま実行するように</li>
+                          <li>15の倍数のとき、3の倍数のときの結果と5の倍数のときの結果を足してFizzBuzzを作成</li>
+                          <li><code>&lt;=</code>の代わりに<code>&lt;</code>を使用して、1文字削減</li>
+                          <li>最後の <code>|| idx++</code> の代わりに<code>, idx++</code> を使用して、1文字削減</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" data-tab-id="4">
+                  <div class="columns">
+                    <div class="column is-half">
+                      <div class="example-golf__code">
+                        <pre><code class="language-js">i=1;while(i&lt;101)console.log(((i%3?"":"Fizz")+(i%5?"":"Buzz"))||i),i++</code></pre>
+                      </div>
+                    </div>
+                    <div class="column is-half">
+                      <div class="example-golf__comment">
+                        <div class="example-golf__charcter-count">69文字</div>
+                        <ul class="example-golf__point">
+                          <li>変数名を一文字に変更</li>
+                          <li>不要なスペースを削除</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="section-competition">
+        <div class="section__container">
+          <div class="section__title">大会概要</div>
+          <div class="section__subsection"></div>
+          <table class="table">
+            <tbody>
+              <tr class="table__row">
+                <td class="table__column--header"><span class=""></span>応募資格</td>
+                <td class="table__column">
+                  大会期間中、
+                  <span class="table__text--em">株式会社ルークの正社員であること</span>
+                </td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__column--header">スケジュール</td>
+                <td class="table__column">
+                  <div>
+                    <span class="table__text--em">1/9</span>
+                    <span class="table__text--small">（火）</span>
+                    問題発表・エントリー開始
+                  </div>
+                  <div>
+                    <span class="table__text--em">1/15</span>
+                    <span class="table__text--small">（月）</span>
+                    エントリー締切
+                  </div>
+                  <div>
+                    <span class="table__text--em">1/22</span>
+                    <span class="table__text--small">（月）</span>
+                    結果発表
+                  </div>
+                </td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__column--header">プログラミング言語</td>
+                <td class="table__column">
+                  <span class="table__text--em">JavaScript</span>
+                  （Node.js <span class="table__text--small">バージョン18</span>）
+                </td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__column--header">ルール</td>
+                <td class="table__column">
+                  大会期間の開始時に、作成するプログラムのお題とそのお題の実装例コード<sup>※</sup>が発表されます。<br />
+                  お題で指定されたプログラムを、<span class="table__text--em"> できるだけ短いコード </span
+                  >で作成してください。<br />
+                  <span class="table__text--small"
+                    >※：お題のプログラムを文字数の削減などすることなく簡単に実装したソースコードです。
+                    応募する際、このコードを修正して短くしていくことも、一からコードを作成することもできます。</span
+                  >
+                </td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__column--header"></td>
+                <td class="table__column">
+                  <ol class="notes">
+                    <li>
+                      インターネット上のコードを参考にしたり、ツールなどを使用してプログラムを作成することは可能ですが、ソースコードの<span
+                        class="notes__text--em"
+                        >著作者はエントリーした本人</span
+                      >でなければなりません。
+                    </li>
+                    <li>
+                      コードの長さは、UTF-8エンコード時のバイト数でカウントします。<span class="notes__text--em"
+                        >ひらがななどを使用すると文字数よりも長くカウントされます</span
+                      >のでご注意ください。
+                    </li>
+                    <li>
+                      コードはNode.jsで実行します。<span class="notes__text--em"
+                        >ブラウザ固有の機能は使用できません</span
+                      >のでご注意ください。
+                    </li>
+                  </ol>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="section__subsection">
+            <a href="#section-entry" class="button is-link is-large">問題・エントリーはこちら</a>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="section-prize">
+        <div class="section__container">
+          <div class="section__title">賞品</div>
+          <div class="section__subsection">
+            <p>
+              あなたの書いたコードの短さに応じて、<span class="section__text--em">豪華賞品</span>がもらえます！<br />
+              <span class="section__text--small"
+                >まったく同じスコアの応募が複数あった場合、賞品はランダムに決定しますのであらかじめご了承ください。</span
+              >
+            </p>
+          </div>
+          <div class="section__subsection--stretch">
+            <div class="columns is-desktop">
+              <div class="column">
+                <div class="prize-info box">
+                  <div class="prize-info__header">
+                    <img class="prize-info__image" src="./assets/prizes/monitor.svg" />
+                    <span class="prize-info__title">1位</span>
+                  </div>
+                  <div class="prize-info__name">15.6インチ モバイルモニター</div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="prize-info box">
+                  <div class="prize-info__header">
+                    <img class="prize-info__image" src="./assets/prizes/usb-memory.svg" />
+                    <span class="prize-info__title">2位</span>
+                  </div>
+                  <div class="prize-info__name">USBメモリ型外付けSSD</div>
+                  <div class="prize-info__text--small">USB type-C端子</div>
+                </div>
+              </div>
+            </div>
+            <div class="columns is-desktop">
+              <div class="column">
+                <div class="prize-info box">
+                  <div class="prize-info__header">
+                    <img class="prize-info__image" src="./assets/prizes/plug.svg" />
+                    <span class="prize-info__title">3位</span>
+                  </div>
+                  <div class="prize-info__name">65W USB PowerDelivery対応 充電器</div>
+                  <div class="prize-info__text--small">USB type-C端子</div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="prize-info box">
+                  <div class="prize-info__header">
+                    <img class="prize-info__image" src="./assets/prizes/other.svg" />
+                    <span class="prize-info__title"></span>
+                  </div>
+                  <div class="prize-info__name">特別賞</div>
+                  <div class="prize-info__text--small">面白い工夫をしていただいた方に、特別賞をプレゼントします！</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="section-entry">
+        <div class="section__container">
+          <div class="section__title">問題・エントリー</div>
+          <div class="section__subsection">
+            <div class="box coming-soon">
+              <div class="coming-soon__title">COMING SOON</div>
+              <div class="coming-soon__image-container">
+                <img src="assets/cute-golden-retriever.jpg" class="coming-soon__image" />
+                <div class="coming-soon__image-credit">
+                  <a href="https://jp.freepik.com/free-photo/cute-golden-retriever_8023981.htm" target="_blank"
+                    >著作者：Racool_studio</a
+                  >／出典：Freepik
+                </div>
+              </div>
+              <div class="coming-soon__text">
+                問題の発表・エントリーの開始は <span class="section__text--em">1/9</span
+                ><span class="section__text--small">（火）</span> です。<br />
+                それまではこちらのかわいいワンちゃんをご覧ください。
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__container" style="display: none">
+          <div class="section__title">問題</div>
+          <div class="section__subsection">
+            <div class="columns is-desktop">
+              <div class="column">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-header-title">問題</div>
+                  </div>
+                  <div class="card-content">
+                    <div class="content">
+                      <!-- TODO 問題 -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-header-title">実装例</div>
+                  </div>
+                  <div class="card-content">
+                    <div class="content">
+                      <!-- TODO 実装例 -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section__title">エントリー</div>
+          <div class="section__subsection">
+            <div class="box">
+              <div class="entry-caution">
+                エントリーの前に、以下の点をよくご確認ください！
+                <ul class="entry-caution__list">
+                  <li>
+                    コードの<span class="entry-caution__text--em">動作確認</span>はしましたか？<a
+                      href="https://stackblitz.com/edit/node-bgyaqc?file=index.js"
+                      target="_blank"
+                      >StackBlitz</a
+                    >などで事前に動作確認することをおすすめします。
+                  </li>
+                  <li>コードから改行など<span class="entry-caution__text--em">不要な文字は取り除きましたか</span>？</li>
+                </ul>
+              </div>
+              <a href="https://forms.gle/4vpc5vqjXy6epRQ3A" target="_blank" class="button is-link is-large"
+                >エントリーフォームへ</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="section-qa">
+        <div class="section__container">
+          <div class="section__title">Q&A</div>
+          <div class="section__subsection">
+            <div class="box qa-item">
+              <div class="qa-item__q">
+                <div class="qa-item__q-title">Q</div>
+                <div class="qa-item__q-content">
+                  インターネット等で類似問題を探して、そのコードを参考にしても良いですか？
+                </div>
+              </div>
+              <div class="qa-item__a">
+                <div class="qa-item__a-title">A</div>
+                <div class="qa-item__a-content">
+                  <span class="qa-item__text--em">はい、問題ありません。</span><br />
+                  ただし、
+                  <span class="qa-item__text--em">コードの著作者はエントリーする本人</span>
+                  である必要があります。
+                  <br />
+                  他の人の著作物を（著作権が譲渡されていたとしても）あなたのコードとして提出することはできません。
+                </div>
+              </div>
+            </div>
+
+            <div class="box qa-item">
+              <div class="qa-item__q">
+                <div class="qa-item__q-title">Q</div>
+                <div class="qa-item__q-content">
+                  コードの整形など（例えばminify）のためにツールを使用しても良いですか？
+                </div>
+              </div>
+              <div class="qa-item__a">
+                <div class="qa-item__a-title">A</div>
+                <div class="qa-item__a-content">
+                  <span class="qa-item__text--em">はい、問題ありません。</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="box qa-item">
+              <div class="qa-item__q">
+                <div class="qa-item__q-title">Q</div>
+                <div class="qa-item__q-content">エントリー後にコードの変更はできますか？</div>
+              </div>
+              <div class="qa-item__a">
+                <div class="qa-item__a-title">A</div>
+                <div class="qa-item__a-content">
+                  <span class="qa-item__text--em">はい、可能です。</span><br />
+                  エントリー後にコードを変更する場合は再度エントリーフォームにアクセスして、回答を編集してください。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="supporter-view">
+        <div class="supporter-view__title">提供</div>
+        <div class="supporter-view__item">
+          <a href="https://www.rook-jp.com" target="_blank">
+            <img class="supporter-view__logo" src="assets/rook_logo.svg" />
+          </a>
+          <div class="supporter-view__name">株式会社ルーク</div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer__copyright">&copy; rook-codegolf2023 運営チーム</div>
+        <div class="footer__link-icons">
+          <a href="https://github.com/yukitomoda/rook-codegolf2023" target="_blank">
+            <figure class="image is-32x32">
+              <img src="assets/github-mark-white.svg" />
+            </figure>
+          </a>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

@@ -1,0 +1,7 @@
+.tab-panes {
+    .tab-pane {
+        &:not(.is-active) {
+            display: none;
+        }
+    }
+}

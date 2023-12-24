@@ -1,0 +1,17 @@
+.example-golf {
+    min-height: 20em;
+    width: 95%;
+
+    &__comment {
+        text-align: start;
+    }
+
+    &__charcter-count {
+        font-weight: 700;
+    }
+
+    &__point {
+        list-style: disc;
+        margin-left: 1em;
+    }
+}

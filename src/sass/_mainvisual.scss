@@ -1,0 +1,60 @@
+@import "variables";
+
+.mainvisual {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-image: radial-gradient(circle, rgba(200, 255, 200, 0.8) 0%, rgba(200, 255, 200, 0.2) 100%),
+        url(../assets/main-visual.jpg);
+    background-color: white;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: var(--font-size-large);
+
+    &__container {
+        width: 100%;
+    }
+
+    &__slogan {
+        text-align: center;
+        font-size: var(--font-size-x-large);
+        font-weight: 700;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__title-logo {
+        height: 50vh;
+        max-height: 400px;
+        max-width: 80vw;
+    }
+
+    &__date {
+        text-align: center;
+
+        &__text {
+            font-size: var(--font-size-x-large);
+            font-weight: 700;
+        }
+
+        &__text--small {
+            font-size: var(--font-size-large);
+            font-weight: 700;
+        }
+    }
+
+    &__author {
+        text-align: right;
+        font-size: var(--font-size-small);
+        color: white;
+
+        a {
+            color: white;
+        }
+    }
+}
