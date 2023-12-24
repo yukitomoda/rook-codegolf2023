@@ -5,13 +5,10 @@
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
-    z-index: 100;
     background-image: radial-gradient(circle, rgba(200, 255, 200, 0.8) 0%, rgba(200, 255, 200, 0.2) 100%),
         url(../assets/main-visual.jpg);
     background-color: white;
-    background-position-y: 35%;
-    background-position-x: 75%;
-    background-size: auto;
+    background-size: cover;
     align-items: center;
     justify-content: center;
     color: black;
@@ -21,26 +18,19 @@
         width: 100%;
     }
 
-    &__text--bold {
+    &__slogan {
         text-align: center;
-        font-style: normal;
+        font-size: var(--font-size-x-large);
         font-weight: 700;
-        line-height: normal;
     }
 
     &__title {
-        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
         text-align: center;
-        font-family: Rubik Mono One;
-        font-size: 8rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
     }
 
     &__title-logo {
         height: 50vh;
-        max-height: 600px;
+        max-height: 400px;
         max-width: 80vw;
     }
 
@@ -48,19 +38,13 @@
         text-align: center;
 
         &__text {
-            font-family: var(--generic-font);
-            font-size: var(--font-size-large);
-            font-style: normal;
+            font-size: var(--font-size-x-large);
             font-weight: 700;
-            line-height: normal;
         }
 
         &__text--small {
-            font-family: var(--generic-font);
-            font-size: var(--font-size-small);
-            font-style: normal;
+            font-size: var(--font-size-large);
             font-weight: 700;
-            line-height: normal;
         }
     }
 
