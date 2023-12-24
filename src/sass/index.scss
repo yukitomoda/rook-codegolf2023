@@ -1,3 +1,4 @@
+@import "bulma-customize";
 @import "../../node_modules/bulma/bulma.sass";
 @import "mainvisual";
 
@@ -47,14 +48,13 @@ html {
         font-size: 14px;
     }
     @include desktop {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
 pre {
     text-align: left;
     font-family: var(--generic-font-monospace);
-    padding: 0 !important;
 }
 
 .card {
