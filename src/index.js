@@ -1,12 +1,17 @@
 import './sass/loader.scss';
 import Pace from 'pace-js';
 import 'destyle.css';
+import 'highlight.js/styles/github.css';
 import './sass/index.scss';
+import hljs from 'highlight.js/lib/core';
+import javascript from 'highlight.js/lib/languages/javascript';
 
 window.addEventListener('DOMContentLoaded', () => {
   Pace.start();
   navbar();
   tabs();
+  hljs.registerLanguage('javascript', javascript);
+  hljs.highlightAll();
 });
 
 function navbar() {
