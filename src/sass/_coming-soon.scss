@@ -1,0 +1,32 @@
+.coming-soon {
+    background-color: #def;
+
+    &__title {
+        margin: 1rem;
+        font-size: var(--font-size-x-large);
+        font-family: var(--font-pop);
+    }
+
+    &__image {
+        max-height: 300px;
+    }
+
+    &__image-credit {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        font-size: var(--font-size-small);
+    }
+
+    &__text {
+        font-size: var(--font-size-large);
+
+        &--em {
+            font-weight: 700;
+        }
+
+        &--small {
+            font-size: var(--font-size-small);
+        }
+    }
+}

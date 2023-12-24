@@ -1,0 +1,29 @@
+.table {
+    /* bulma table component */
+    @include until-fullhd {
+        margin: 1rem 0.5rem;
+    }
+    @include fullhd {
+        padding: 0.6rem;
+        margin: 1rem 4rem;
+    }
+
+    font-size: var(--font-size-normal);
+
+    &__column {
+        &--header {
+            font-weight: 700;
+            text-wrap: nowrap;
+        }
+    }
+
+    &__text {
+        &--em {
+            font-weight: 700;
+        }
+
+        &--small {
+            font-size: var(--font-size-small);
+        }
+    }
+}

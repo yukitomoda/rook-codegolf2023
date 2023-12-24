@@ -1,0 +1,14 @@
+.entry-caution {
+    margin: 1rem;
+
+    &__list {
+        list-style: disc;
+        text-align: start;
+    }
+
+    &__text {
+        &--em {
+            font-weight: 700;
+        }
+    }
+}

@@ -2,45 +2,35 @@
 
 .mainvisual {
     display: flex;
+    flex-direction: column;
     width: 100%;
     min-height: 100vh;
-    z-index: 100;
-    background-image: url(../assets/8586397.jpg);
-    background-position-y: 35%;
-    background-position-x: 75%;
-    background-size: auto;
+    background-image: radial-gradient(circle, rgba(200, 255, 200, 0.8) 0%, rgba(200, 255, 200, 0.2) 100%),
+        url(../assets/main-visual.jpg);
+    background-color: white;
+    background-size: cover;
     align-items: center;
     justify-content: center;
+    color: black;
+    font-size: var(--font-size-large);
 
     &__container {
         width: 100%;
     }
 
-    &__text--bold {
-        font-size: $textFontSize;
-        color: $fontColor;
+    &__slogan {
         text-align: center;
-        font-family: $fontFamily;
-        font-size: $textFontSize;
-        font-style: normal;
+        font-size: var(--font-size-x-large);
         font-weight: 700;
-        line-height: normal;
     }
 
     &__title {
-        color: $fontColor;
-        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
         text-align: center;
-        font-family: Rubik Mono One;
-        font-size: 8rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
     }
 
     &__title-logo {
         height: 50vh;
-        max-height: 600px;
+        max-height: 400px;
         max-width: 80vw;
     }
 
@@ -48,26 +38,23 @@
         text-align: center;
 
         &__text {
-            color: $fontColor;
-            font-family: Noto Sans JP;
-            font-size: 2.5rem;
-            font-style: normal;
+            font-size: var(--font-size-x-large);
             font-weight: 700;
-            line-height: normal;
         }
 
         &__text--small {
-            color: $fontColor;
-            font-family: Noto Sans JP;
-            font-size: $textFontSize;
-            font-style: normal;
+            font-size: var(--font-size-large);
             font-weight: 700;
-            line-height: normal;
         }
     }
 
     &__author {
         text-align: right;
-        color: rgba(255, 255, 255, 0.2);
+        font-size: var(--font-size-small);
+        color: white;
+
+        a {
+            color: white;
+        }
     }
 }
