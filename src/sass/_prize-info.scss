@@ -19,20 +19,13 @@
     }
 
     &__name {
-        font-size: var(--font-size-large);
+        font-size: var(--font-size-x-large);
         font-weight: 700;
+        margin: 1rem 0;
     }
 
     &__text {
         font-size: var(--font-size-normal);
         font-weight: 400;
-
-        &--em {
-            font-weight: 700;
-        }
-
-        &--small {
-            font-size: var(--font-size-small);
-        }
     }
 }
