@@ -13,7 +13,7 @@
     }
 
     &__q-title {
-        width: 3rem;
+        width: var(--font-size-xx-large);
         text-align: end;
         font-family: var(--generic-font-monospace);
         font-size: var(--font-size-xx-large);
@@ -23,7 +23,7 @@
     }
 
     &__q-content {
-        padding-top: 1rem;
+        padding-top: calc(var(--font-size-xx-large) - var(--font-size-large));
         text-align: start;
         font-size: var(--font-size-large);
     }
@@ -34,7 +34,7 @@
     }
 
     &__a-title {
-        width: 3rem;
+        width: var(--font-size-xx-large);
         text-align: end;
         font-family: var(--generic-font-monospace);
         font-size: var(--font-size-xx-large);
@@ -44,7 +44,7 @@
     }
 
     &__a-content {
-        padding-top: 1rem;
+        padding-top: calc(var(--font-size-xx-large) - var(--font-size-large));
         text-align: start;
         font-size: var(--font-size-large);
     }
