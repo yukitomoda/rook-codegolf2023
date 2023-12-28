@@ -19,6 +19,7 @@
     --generic-font: "Noto Sans JP";
     --generic-font-monospace: "Noto Sans Mono";
     --font-pop: "Titan One";
+    --font-color-em: hsl(128, 92%, 5%);
 
     @include touch {
         --font-size-xx-large: 2rem;

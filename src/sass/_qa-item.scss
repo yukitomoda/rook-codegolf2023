@@ -13,6 +13,7 @@
     }
 
     &__q-title {
+        color: var(--font-color-em);
         width: var(--font-size-xx-large);
         text-align: end;
         font-family: var(--generic-font-monospace);
@@ -34,6 +35,7 @@
     }
 
     &__a-title {
+        color: var(--font-color-em);
         width: var(--font-size-xx-large);
         text-align: end;
         font-family: var(--generic-font-monospace);
@@ -51,6 +53,7 @@
 
     &__text {
         &--em {
+            color: var(--font-color-em);
             font-weight: 700;
         }
 
