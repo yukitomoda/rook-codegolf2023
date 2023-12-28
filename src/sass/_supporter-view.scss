@@ -26,7 +26,7 @@
     }
 
     &__name {
-        color: black;
+        color: var(--font-color-em);
         font-size: var(--font-size-large);
         font-weight: 700;
     }
