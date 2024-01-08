@@ -1,0 +1,13 @@
+.subject-view {
+    max-width: 100%;
+
+    &__sample-output {
+        &--y-10em {
+            font-size: var(--font-size-small);
+            max-height: 10em;
+            overflow-y: auto;
+            overflow-block: clip;
+            background-color: rgba(103, 112, 50, 0.1);
+        }
+    }
+}
