@@ -383,9 +383,30 @@ while(idx &lt; 101)
       </section>
       <section class="section" id="section-entry">
         <div class="section__container">
+          <div class="section__title">問題・エントリー</div>
+          <div class="section__subsection">
+            <div class="box coming-soon">
+              <div class="coming-soon__title">COMING SOON</div>
+              <div class="coming-soon__image-container">
+                <img src="assets/cute-golden-retriever.jpg" class="coming-soon__image" />
+                <div class="coming-soon__image-credit">
+                  <a href="https://jp.freepik.com/free-photo/cute-golden-retriever_8023981.htm" target="_blank"
+                    >著作者：Racool_studio</a
+                  >／出典：Freepik
+                </div>
+              </div>
+              <div class="coming-soon__text">
+                問題の発表・エントリーの開始は <span class="section__text--em">1/9</span
+                ><span class="section__text--small">（火）</span> です。<br />
+                それまではこちらのかわいいワンちゃんをご覧ください。
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__container" style="display: none">
           <div class="section__title">問題</div>
           <div class="section__subsection">
-            <div class="columns is-desktop subject-view">
+            <div class="columns is-desktop">
               <div class="column">
                 <div class="card">
                   <div class="card-header">
@@ -393,80 +414,7 @@ while(idx &lt; 101)
                   </div>
                   <div class="card-content">
                     <div class="content">
-                      コンソールに52枚のトランプを出力してください。
-                      <ul>
-                        <li>
-                          出力の形式は、ランク、スートの間に半角スペース1つはさんだものとします。（例：
-                          <code>Q Spade</code>）
-                        </li>
-                        <li>ランクは A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K の形式とします。</li>
-                        <li>
-                          スートは <code>Spade</code>, <code>Heart</code>, <code>Diamond</code>,
-                          <code>Club</code> の形式とします。
-                        </li>
-                        <li>
-                          出力の順序は、以下の通りとします。
-                          <ol>
-                            <li>スートが Spade, Heart, Diamond, Club の順</li>
-                            <li>同じスートではランクの昇順</li>
-                          </ol>
-                        </li>
-                      </ul>
-                      出力の例は以下のとおりです：
-                      <pre class="subject-view__sample-output--y-10em">
-A Spade
-2 Spade
-3 Spade
-4 Spade
-5 Spade
-6 Spade
-7 Spade
-8 Spade
-9 Spade
-10 Spade
-J Spade
-Q Spade
-K Spade
-A Heart
-2 Heart
-3 Heart
-4 Heart
-5 Heart
-6 Heart
-7 Heart
-8 Heart
-9 Heart
-10 Heart
-J Heart
-Q Heart
-K Heart
-A Diamond
-2 Diamond
-3 Diamond
-4 Diamond
-5 Diamond
-6 Diamond
-7 Diamond
-8 Diamond
-9 Diamond
-10 Diamond
-J Diamond
-Q Diamond
-K Diamond
-A Club
-2 Club
-3 Club
-4 Club
-5 Club
-6 Club
-7 Club
-8 Club
-9 Club
-10 Club
-J Club
-Q Club
-K Club</pre
-                      >
+                      <!-- TODO 問題 -->
                     </div>
                   </div>
                 </div>
@@ -478,24 +426,7 @@ K Club</pre
                   </div>
                   <div class="card-content">
                     <div class="content">
-                      <pre><code class="language-js">const suits = ['Spade', 'Heart', 'Diamond', 'Club'];
-
-for (let i = 0; i &#60; 4; i++) {
-    const suit = suits[i];
-    for (let j = 1; j &#60;= 13; j++) {
-        if (j == 1) {
-            console.log("A " + suit);
-        } else if (j == 11) {
-            console.log("J " + suit);
-        } else if (j == 12) {
-            console.log("Q " + suit);
-        } else if (j == 13) {
-            console.log("K " + suit);
-        } else {
-            console.log(j + " " + suit);
-        }
-    }
-}</code></pre>
+                      <!-- TODO 実装例 -->
                     </div>
                   </div>
                 </div>
