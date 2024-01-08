@@ -383,30 +383,9 @@ while(idx &lt; 101)
       </section>
       <section class="section" id="section-entry">
         <div class="section__container">
-          <div class="section__title">問題・エントリー</div>
-          <div class="section__subsection">
-            <div class="box coming-soon">
-              <div class="coming-soon__title">COMING SOON</div>
-              <div class="coming-soon__image-container">
-                <img src="assets/cute-golden-retriever.jpg" class="coming-soon__image" />
-                <div class="coming-soon__image-credit">
-                  <a href="https://jp.freepik.com/free-photo/cute-golden-retriever_8023981.htm" target="_blank"
-                    >著作者：Racool_studio</a
-                  >／出典：Freepik
-                </div>
-              </div>
-              <div class="coming-soon__text">
-                問題の発表・エントリーの開始は <span class="section__text--em">1/9</span
-                ><span class="section__text--small">（火）</span> です。<br />
-                それまではこちらのかわいいワンちゃんをご覧ください。
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section__container" style="display: none">
           <div class="section__title">問題</div>
           <div class="section__subsection">
-            <div class="columns is-desktop">
+            <div class="columns is-desktop subject-view">
               <div class="column">
                 <div class="card">
                   <div class="card-header">
@@ -414,7 +393,66 @@ while(idx &lt; 101)
                   </div>
                   <div class="card-content">
                     <div class="content">
-                      <!-- TODO 問題 -->
+                      3つのフレーズ <code>I want you!</code>, <code>I need you!</code>,
+                      <code>I love you!</code>
+                      を繰り返し左にローテーションさせながら、50行出力してください。フレーズのうち左に溢れた部分は、半角スペース5つをはさんで末尾に出力します。<br />
+                      例えば、 <code>nt you!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I wa</code> （<code>I want you!</code>
+                      を左に4文字ずらしたもの）を出力したあとは、次のフレーズ<code>I need you!</code
+                      >を左に5文字ずらして、<code>d you!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I nee</code
+                      >と出力します。<br /><br />
+                      出力例は以下のとおりです。
+                      <pre class="subject-view__sample-output--y-20em">
+I want you!     
+ need you!     I
+love you!     I 
+ant you!     I w
+ed you!     I ne
+e you!     I lov
+ you!     I want
+you!     I need 
+ou!     I love y
+u!     I want yo
+!     I need you
+     I love you!
+    I want you! 
+   I need you!  
+  I love you!   
+ I want you!    
+I need you!     
+ love you!     I
+want you!     I 
+eed you!     I n
+ve you!     I lo
+t you!     I wan
+ you!     I need
+you!     I love 
+ou!     I want y
+u!     I need yo
+!     I love you
+     I want you!
+    I need you! 
+   I love you!  
+  I want you!   
+ I need you!    
+I love you!     
+ want you!     I
+need you!     I 
+ove you!     I l
+nt you!     I wa
+d you!     I nee
+ you!     I love
+you!     I want 
+ou!     I need y
+u!     I love yo
+!     I want you
+     I need you!
+    I love you! 
+   I want you!  
+  I need you!   
+ I love you!    
+I want you!     
+ need you!     I</pre
+                      >
                     </div>
                   </div>
                 </div>
@@ -426,7 +464,23 @@ while(idx &lt; 101)
                   </div>
                   <div class="card-content">
                     <div class="content">
-                      <!-- TODO 実装例 -->
+                      <pre><code class="language-js">let lines = [
+    'I want you!     ',
+    'I need you!     ',
+    'I love you!     '
+];
+const lineLength = 16;
+
+for (let i = 0; i &lt; 50; i++) {
+    const line = lines[i % 3];
+    
+    // 前半部分
+    const head = line.slice(i % lineLength);
+    // 後半部分
+    const tail = line.slice(0, i % lineLength);
+
+    console.log(head + tail);
+}</code></pre>
                     </div>
                   </div>
                 </div>
