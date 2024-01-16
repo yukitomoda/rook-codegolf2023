@@ -1,10 +1,11 @@
-.coming-soon {
+.entry-closed {
     background-color: #def;
+    text-align: center;
 
     &__title {
         margin: 1rem;
         color: var(--font-color-em);
-        font-size: var(--font-size-x-large);
+        font-size: var(--font-size-xx-large);
         font-family: var(--font-pop);
     }
 
