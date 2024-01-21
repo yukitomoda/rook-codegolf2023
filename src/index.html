@@ -33,6 +33,7 @@
             <a class="navbar-item" href="#section-competition">大会概要</a>
             <a class="navbar-item" href="#section-prize">賞品</a>
             <a class="navbar-item" href="#section-entry">エントリー</a>
+            <a class="navbar-item" href="#section-results">結果発表</a>
             <a class="navbar-item" href="#section-qa">Q&A</a>
           </div>
         </div>
@@ -508,6 +509,63 @@ for (let i = 0; i &lt; 50; i++) {
               >
               <div class="front-cover__body">
                 <div class="front-cover__text">エントリーの受付は終了しました！</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="section-results">
+        <div class="section__container">
+          <div class="section__title"><span class="text--pop">CONGRATULATIONS!</span></div>
+          <div class="section__subsection">
+            <div class="result">
+              <div class="result__header">
+                <div class="result__title">1位</div>
+                <div class="result__name">津野 大輝<span class="result__name-suffix">さん</span></div>
+                <div class="result__code-length">94<span class="result__code-length-suffix">文字</span></div>
+              </div>
+              <div class="result__body">
+                <pre><code class="language-js">for(i=9;++i&lt;60;console.log((s+s).substr(i%16,16)))s=' you!     I '+['love','want','need'][i%3]</code></pre>
+              </div>
+            </div>
+            <div class="result">
+              <div class="result__header">
+                <div class="result__title">2位</div>
+                <div class="result__name">TT<span class="result__name-suffix">さん</span></div>
+                <div class="result__code-length">105<span class="result__code-length-suffix">文字</span></div>
+              </div>
+              <div class="result__body">
+                <pre><code class="language-js">for(i=0;i&lt;50;i++){e='I '+['want','need','love'][i%3]+' you!     ';console.log((e+e).slice(i%16,i%16+16))}</code></pre>
+              </div>
+            </div>
+            <div class="result">
+              <div class="result__header">
+                <div class="result__title">3位</div>
+                <div class="result__name">▽・ｘ・▽<span class="result__name-suffix">さん</span></div>
+                <div class="result__code-length">106<span class="result__code-length-suffix">文字</span></div>
+              </div>
+              <div class="result__body">
+                <pre><code class="language-js">for(i=0;i&lt;50;i++)console.log((`I ${["want","need","love"][i%3]} you!     `).repeat(2).slice(i%16,i%16+16))</code></pre>
+              </div>
+            </div>
+            <div class="result">
+              <div class="result__header">
+                <div class="result__title">特別賞</div>
+                <div class="result__name">510<span class="result__name-suffix">さん</span></div>
+                <div class="result__code-length">110<span class="result__code-length-suffix">文字</span></div>
+              </div>
+              <div class="result__body">
+                <pre><code class="language-js">w=['want','need','love'];i=0;while(i&lt;50)s=`I ${w[i%3]} you!     `,console.log(s.slice(i%16)+s.slice(0,i++%16))</code></pre>
+                <div class="result__comment">
+                  <code>while() {}</code> や
+                  <code>for() {}</code>
+                  の{}を削減するためには、{}内の文をなんとか一つに収める必要がありますが、このコードでは
+                  <a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Comma_Operator"
+                    >カンマ演算子</a
+                  >
+                  を使用して、複数の式を一つの文に押し込めています。<br />
+                  普段使用する機会が少ない演算子なので、存在自体を知らなかった方も多いのではないでしょうか？
+                </div>
               </div>
             </div>
           </div>

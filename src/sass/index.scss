@@ -10,6 +10,7 @@
 @import "subject-view";
 @import "entry-caution";
 @import "qa-item";
+@import "result-view";
 @import "supporter-view";
 @import "footer";
 @import "tab";
@@ -21,6 +22,7 @@
     --generic-font-monospace: "Noto Sans Mono";
     --font-pop: "Titan One";
     --font-color-em: hsl(128, 92%, 5%);
+    --font-color-normal: hsl(0, 0%, 29%);
 
     @include touch {
         --font-size-xx-large: 2rem;
@@ -63,6 +65,10 @@ pre {
     text-align: left;
 }
 
+.text--pop {
+    font-family: var(--font-pop);
+}
+
 #section-whats-codegolf {
     --section-main-color: #b3eac2;
 }
@@ -77,6 +83,10 @@ pre {
 
 #section-entry {
     --section-main-color: #d0ddc2;
+}
+
+#section-results {
+    --section-main-color: #f0f8b2;
 }
 
 #section-qa {
