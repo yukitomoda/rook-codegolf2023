@@ -1,0 +1,63 @@
+.result {
+    @include touch {
+        width: 90%;
+        margin: 0.2em;
+    }
+
+    @include desktop {
+        width: 60%;
+        margin: 0.5em;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+    }
+
+    &__title {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        color: var(--font-color-em);
+        font-size: var(--font-size-x-large);
+        font-weight: 700;
+        text-wrap: nowrap;
+    }
+
+    &__name {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        color: var(--font-color-em);
+        font-size: var(--font-size-large);
+        font-weight: 400;
+        text-wrap: nowrap;
+    }
+
+    &__name-suffix {
+        color: var(--font-color-normal);
+        font-size: var(--font-size-normal);
+        font-weight: 400;
+    }
+
+    &__code-length {
+        color: hsl(213, 89%, 51%);
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        font-size: var(--font-size-large);
+        font-weight: 400;
+        text-wrap: nowrap;
+    }
+
+    &__code-length-suffix {
+        color: var(--font-color-normal);
+        font-size: var(--font-size-normal);
+        font-weight: 400;
+    }
+
+    &__comment {
+        margin: 0.2em;
+        border: 3px hsla(0, 0%, 100%, 90%) solid;
+        border-radius: 0.5em;
+        background-color: hsla(0, 0%, 100%, 60%);
+    }
+}
