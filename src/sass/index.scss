@@ -23,6 +23,7 @@
     --font-pop: "Titan One";
     --font-color-em: hsl(128, 92%, 5%);
     --font-color-normal: hsl(127, 12%, 12%);
+    --font-color-muted: hsla(128, 12%, 30%, 80%);
 
     @include touch {
         --font-size-xx-large: 2rem;
